@@ -18,7 +18,7 @@ setInterval(() => {
   messages = [];
   while(quantity > 0) {
     messages.push(fakeData())
-    quantityMessage -= 1;
+    quantity -= 1;
   }
 }, 5000)
 
