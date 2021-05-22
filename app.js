@@ -12,8 +12,16 @@ app.use(koaBody({urlencoded: true}))
 
 let messages = [];
 
+setInterval(() => {
+  let quantityMessage = Math.floor(Math.random() * 3);
+  messages = [];
+  while(quantityMessage > 0) {
+    messages.push(fakeData())
+    quantityMessage -= 1;
+  }
+}, 5000)
+
 router.get('/messages/unread', async (ctx) => {
-  messages.push(fakeData())
   ctx.response.body = {
     status: "ok",
     timestamp: Date.now(),

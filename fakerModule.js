@@ -8,7 +8,7 @@ const fakeData = () => {
     from: faker.internet.email(),
     subject: faker.lorem.words(),
     body: faker.lorem.text() ,
-    received: Date.now()
+    received: Date.now(),
   }
 }
 
