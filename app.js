@@ -13,9 +13,10 @@ app.use(koaBody({urlencoded: true}))
 let messages = [];
 
 setInterval(() => {
-  let quantityMessage = Math.floor(Math.random() * 3);
+  const quantityMessage = [1, 2, 3, 4]
+  let quantity = Math.floor(Math.random() * quantityMessage.length);
   messages = [];
-  while(quantityMessage > 0) {
+  while(quantity > 0) {
     messages.push(fakeData())
     quantityMessage -= 1;
   }
